@@ -1,0 +1,9 @@
+.header {
+  background-color: #ffff;
+}
+@layout-header-background: red;
+
+.ant-layout-header {
+  height: 100vh;
+  background-color: #f50;
+}
