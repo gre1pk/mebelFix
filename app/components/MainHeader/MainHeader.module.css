@@ -1,9 +1,9 @@
 .header {
-  background-color: #ffff;
+  padding: 0 40px;
 }
-@layout-header-background: red;
 
-.ant-layout-header {
-  height: 100vh;
-  background-color: #f50;
+@media (max-width: 575px) {
+  .header {
+    padding: 0 15px !important;
+  }
 }
