@@ -1,5 +1,5 @@
 "use client";
-import { PhoneFilled } from "@ant-design/icons";
+import { PhoneFilled, WhatsAppOutlined } from "@ant-design/icons";
 import { Button, Col, Space } from "antd";
 import Link from "antd/es/typography/Link";
 
@@ -19,6 +19,16 @@ export const Contact = () => {
           +375 29 675-83-42
         </Link>
       </Col>
+      <Button
+        icon={<WhatsAppOutlined />}
+        shape="circle"
+        href="tel:+375296758342"
+        style={{
+          backgroundColor: "#7360f2",
+          color: "#fff",
+          borderColor: "#7360f2",
+        }}
+      />
     </Space>
   );
 };

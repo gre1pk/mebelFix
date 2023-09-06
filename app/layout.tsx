@@ -6,6 +6,7 @@ import theme from "./theme/themeConfig";
 import MainHeader from "./components/MainHeader/MainHeader";
 import { AppLogo } from "./components/AppLogo/AppLogo";
 import { Contact } from "./components/Contact/Contact";
+import { AppNavigation } from "./components/AppNavigation/AppNavigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,11 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <ConfigProvider theme={theme}>
             <Layout>
-              <MainHeader AppLogo={<AppLogo />} Contact={<Contact />} />
+              <MainHeader
+                AppLogo={<AppLogo />}
+                Contact={<Contact />}
+                AppNavigation={<AppNavigation />}
+              />
               {children}
             </Layout>
           </ConfigProvider>

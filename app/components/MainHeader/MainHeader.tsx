@@ -1,8 +1,9 @@
 "use client";
-import { Button } from "antd";
+import { Button, Col, Row } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useState } from "react";
 import classes from "./MainHeader.module.css";
+import { Collapsible } from "../Collapsible/Collapsible";
 
 const { Header } = Layout;
 
@@ -18,20 +19,17 @@ const MainHeader: FC<PropsMainHeader> = ({
   Contact,
 }) => {
   return (
-    <Layout>
-      <Header
-        className={classes.header}
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          // padding: "0 15px",
-        }}
-      >
-        {AppLogo}
-        {Contact}
-        {AppNavigation}
-      </Header>
-    </Layout>
+    <>
+      <Layout>
+        <Header className={classes.header}>
+          <Row wrap={false} justify={"space-between"}>
+            <Col md={{ order: 0 }}>{AppLogo}</Col>
+            <Col md={{ order: 2 }}>{Contact}</Col>
+            <Col md={{ order: 1 }}> {AppNavigation}</Col>
+          </Row>
+        </Header>
+      </Layout>
+    </>
   );
 };
 

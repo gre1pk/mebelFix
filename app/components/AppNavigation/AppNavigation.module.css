@@ -1,0 +1,10 @@
+.collapse {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+  /* height: 80vh; */
+}

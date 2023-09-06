@@ -1,5 +1,7 @@
 .header {
   padding: 0 40px;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 @media (max-width: 575px) {
