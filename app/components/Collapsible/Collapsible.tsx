@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, ReactNode } from "react";
 import classes from "./Collapsible.module.css";
 import { className } from "@/app/utils/className/className";
 import { motion, AnimatePresence } from "framer-motion";
