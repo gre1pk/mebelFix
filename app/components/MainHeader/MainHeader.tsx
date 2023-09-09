@@ -1,9 +1,9 @@
 "use client";
-import { Button, Col, Row } from "antd";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-import { FC, ReactElement, useState } from "react";
+import { Col, Row } from "antd";
+import { Layout } from "antd";
+import { FC, ReactElement } from "react";
 import classes from "./MainHeader.module.css";
-import { Collapsible } from "../Collapsible/Collapsible";
+import { AppMenu } from "../AppMenu/AppMenu";
 
 const { Header } = Layout;
 
@@ -19,17 +19,18 @@ const MainHeader: FC<PropsMainHeader> = ({
   Contact,
 }) => {
   return (
-    <>
-      <Layout>
-        <Header className={classes.header}>
-          <Row wrap={false} justify={"space-between"}>
-            <Col md={{ order: 0 }}>{AppLogo}</Col>
-            <Col md={{ order: 2 }}>{Contact}</Col>
-            <Col md={{ order: 1 }}> {AppNavigation}</Col>
-          </Row>
-        </Header>
-      </Layout>
-    </>
+    <Layout>
+      <Header className={classes.header}>
+        <Row wrap={false} justify={"space-between"} align={"middle"}>
+          <Col md={{ order: 0 }}>{AppLogo}</Col>
+          <Col xs={0} md={12}>
+            <AppMenu classNames={[classes.menu]} />
+          </Col>
+          <Col md={{ order: 2 }}>{Contact}</Col>
+          <Col md={{ order: 1 }}> {AppNavigation}</Col>
+        </Row>
+      </Header>
+    </Layout>
   );
 };
 

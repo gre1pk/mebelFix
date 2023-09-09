@@ -359,3 +359,7 @@ template {
   font-family: "Carlito-bold";
   src: url("../public/fonts/Carlito-Bold.ttf");
 }
+
+ul {
+  list-style-type: none;
+}

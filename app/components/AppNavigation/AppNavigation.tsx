@@ -1,14 +1,16 @@
 "use client";
-import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import { CloseOutlined, MenuOutlined, PhoneFilled } from "@ant-design/icons";
 import { Button, Col, Collapse, Modal } from "antd";
 import { useState } from "react";
 import { Collapsible } from "../Collapsible/Collapsible";
 import classNames from "./AppNavigation.module.css";
+import { AppMenu } from "../AppMenu/AppMenu";
+import Link from "next/link";
 
 export const AppNavigation = () => {
   const [open, setOpen] = useState(false);
 
-  const changeModal = () => {
+  const changeCollapse = () => {
     setOpen(!open);
   };
   return (
@@ -16,29 +18,33 @@ export const AppNavigation = () => {
       <Col md={0}>
         {open ? (
           <Button
-            onClick={changeModal}
+            onClick={changeCollapse}
             icon={<CloseOutlined shape="circle" />}
           ></Button>
         ) : (
           <Button
-            onClick={changeModal}
+            onClick={changeCollapse}
             icon={<MenuOutlined shape="circle" />}
           ></Button>
         )}
         <Collapsible open={open} classNames={[classNames.collapse]}>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
-            debitis cumque sequi dolor, porro neque voluptatum impedit voluptate
-            minus, nemo, optio amet ipsa? Vitae laudantium quasi architecto
-            similique veritatis quam. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Iusto debitis cumque sequi dolor, porro neque
-            voluptatum impedit voluptate minus, nemo, optio amet ipsa? Vitae
-            laudantium quasi architecto similique veritatis quam. Lorem ipsum,
-            dolor sit amet consectetur adipisicing elit. Iusto debitis cumque
-            sequi dolor, porro neque voluptatum impedit voluptate minus, nemo,
-            optio amet ipsa? Vitae laudantium quasi architecto similique
-            veritatis quam.
-          </p>
+          <AppMenu />
+          <Button
+            icon={<PhoneFilled />}
+            shape="circle"
+            href="tel:+375296758342"
+          />
+          <Link
+            style={{
+              color: "#333",
+              fontSize: "18px",
+              fontFamily: "Carlito-bold!important",
+              marginLeft: 10,
+            }}
+            href="tel:+375296758342"
+          >
+            +375 29 675-83-42
+          </Link>
         </Collapsible>
       </Col>
     </div>
